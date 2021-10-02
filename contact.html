@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contact us for more information on great deals!" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/70984d4de4.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header__content">
+        <a href="index.html"><img src="Images/rainydays_logo.png" alt="RainyDays Logo" /></a>
+        <nav class="header__nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products/women.html">Women</a></li>
+            <li><a href="products/men.html">Men</a></li>
+            <li><a class="active" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="searchAndIcons">
+          <div class="search">
+            <label for="search"><i class="icon fas fa-search" alt="Search Icon"></i></label>
+            <input type="text" id="search" placeholder="Search product" />
+          </div>
+          <div class="user-and-cart">
+            <a href=" "><i class="fas fa-user" alt="log in icon"></i> </a>
+            <a href="shopping-cart.html"><i class="fas fa-shopping-cart" alt="shopping cart icon"></i></a>
+            <span class="badge badge-warning" id="lblCartCount"> </span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main_contact">
+      <h1>RainyDays Contact Info</h1>
+      <main class="contactPage">
+        <section class="submitContainer"></section>
+        <section class="containerForm">
+          <form id="contactForm">
+            <div class="container-content">
+              <div class="form-details">
+                <div class="input">
+                  <input name="text" id="fullName" class="input" placeholder="Name (required)" />
+                  <div class="formError" id="fullNameError">Please enter your name</div>
+                </div>
+                <div class="input">
+                  <input name="text" id="subject" class="input" placeholder="Subject (required)" />
+                  <div class="formError" id="subjectError">A subject is required</div>
+                </div>
+
+                <div class="input">
+                  <input name="email" id="email" class="input" placeholder="Email (required)" />
+                  <div class="formError" id="emailError">Please enter valid email, e.g. 1234@yahoo.com</div>
+                </div>
+              </div>
+              <div class="form-message">
+                <textarea id="message" class="input" name="message" placeholder="Write your message here"></textarea>
+                <div class="formError" id="messageError">You can't send us an empty message</div>
+              </div>
+            </div>
+            <div class="cta-submit">
+              <button disabled>Submit</button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </main>
+    <footer>
+      <a href="about-us.html">
+        <i class="fas fa-info" alt="Info Icon"></i>
+      </a>
+      <ul>
+        <li><a href="about-us.html">About Us </a></li>
+      </ul>
+    </footer>
+    <script src="js/form.js"></script>
+    <script src="js/cart-label-counter.js"></script>
+  </body>
+</html>

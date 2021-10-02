@@ -1,0 +1,104 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 550px;
+  background: #9cc1d9;
+  border: 2px solid#46718c;
+  border-radius: 5px;
+  text-align: center;
+  padding: 35px 35px 10px 35px;
+  margin: auto;
+}
+
+.container .form-outer {
+  width: 100%;
+  overflow: hidden;
+}
+
+.form-outer .slider {
+  display: flex;
+  width: 400%;
+}
+
+.form-outer .slider .page {
+  width: 25%;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.form-outer .slider .page h1 {
+  text-align: left;
+}
+
+.form-outer .slider .page .field {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.form-outer .slider .page .field button {
+  width: 25%;
+  cursor: pointer;
+}
+
+.form-outer .slider .page .btns {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.container .progress {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%;
+  margin: 10px 0px;
+  align-content: center;
+  font-weight: bold;
+  font-size: 1.1em;
+  border-bottom: 2px dotted black;
+  padding-bottom: 10px;
+}
+
+.progress-step p {
+  margin-bottom: 8px;
+}
+
+.progress .progress-step .bullet {
+  border: 2px solid #000;
+  display: inline-block;
+  padding: 5px;
+  width: 1.1em;
+  height: 1.1em;
+  line-height: 1.1em;
+  border-radius: 50%;
+}
+
+.progress .progress-step .bullet-finish {
+  background: green;
+  color: white;
+  border: 2px solid green;
+  box-shadow: 2px 2px 15px darkgreen;
+}
+
+.progress .progress-step .bullet-active {
+  background: #8c7604;
+  color: white;
+  border: 2px solid #8c7604;
+  box-shadow: 2px 2px 15px #000;
+}
+
+/** Cart **/
+.form-outer .slider .page .cartPage {
+  margin-bottom: 0;
+}
+
+.form-outer .slider .page .field .next-3 {
+  width: 100%;
+}
+
+/** Payment Details **/
+
+@media only screen and (max-width: 900px) {
+  .container {
+    width: 350px;
+    padding: 5px;
+  }
+}

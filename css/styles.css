@@ -1,0 +1,775 @@
+/* All elements or in common for multiple elements in different pages */
+
+body,
+html {
+  font-family: Tahoma, Verdana, "Segoe", sans-serif;
+  font-size: 19px;
+
+  min-height: 100vh;
+  min-width: 200px;
+  background-color: #dddddd;
+  margin: 0px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.welcome_text,
+a,
+h1,
+h2,
+h3,
+button {
+  font-family: "Rockwell", "Verdana", "sans-serif";
+  font-stretch: condensed;
+  font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+}
+
+header,
+footer,
+#search,
+input,
+.checkout-successful {
+  background-color: #dddddd;
+}
+
+header,
+footer {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Main */
+main {
+  max-width: 1200px;
+  display: block;
+  margin: auto;
+  background-color: #e4e4e4;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+}
+
+/* Links */
+a,
+.fas,
+button:enabled {
+  color: #46718c;
+}
+a {
+  text-decoration: none;
+}
+a:hover,
+.fas:hover,
+.active,
+.welcome,
+h1 {
+  color: #8c7604;
+}
+button:hover:enabled,
+button a:hover:enabled {
+  background: #46718c;
+  color: #dddddd;
+}
+
+nav li,
+footer li,
+.fas {
+  font-size: 1.5em;
+}
+
+button {
+  border-radius: 5px;
+  font-size: 1.1em;
+  background-color: #dddddd;
+}
+
+button:hover:enabled {
+  opacity: 2;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.newProductsLink,
+.popularProductsLink {
+  cursor: pointer;
+}
+
+/* Loader */
+
+.loader {
+  border: 16px solid #46718c;
+  border-top: 16px solid darkslategray;
+  border-radius: 100%;
+  width: 75px;
+  height: 75px;
+  animation: spin 2s linear infinite;
+
+  top: -100%;
+  right: -100%;
+  left: -100%;
+  bottom: -100%;
+  margin: auto;
+
+  transform: translateX(-50%);
+}
+.loaderCenter {
+  border: 16px solid #46718c;
+  border-top: 16px solid darkslategray;
+  border-radius: 100%;
+  width: 75px;
+  height: 75px;
+  animation: spin 2s linear infinite;
+
+  position: fixed;
+
+  top: -100%;
+  right: -100%;
+  left: -100%;
+  bottom: -100%;
+  margin: auto;
+
+  transform: translateX(-50%);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Header*/
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header {
+  border-bottom: 1px solid #707070;
+}
+
+.header__nav li,
+footer li {
+  display: inline-block;
+}
+
+nav li {
+  padding: 20px;
+}
+
+.searchAndIcons,
+.search {
+  display: flex;
+}
+
+#search {
+  font-size: 1em;
+  padding-left: 10px;
+  border-radius: 25px;
+  width: 150px;
+}
+.fa-search:hover {
+  cursor: pointer;
+}
+.user-and-cart {
+  margin-left: 15px;
+}
+
+/** Shopping Cart Counter**/
+.badge {
+  padding-left: 9px;
+  padding-right: 9px;
+  border-radius: 9px;
+}
+
+#lblCartCount {
+  font-size: 12px;
+  background: #ff0000;
+  color: #fff;
+  padding: 0 5px;
+  vertical-align: top;
+  margin-left: -10px;
+}
+
+/* Welcome */
+
+.welcome {
+  background-image: url("../Images/rocky-mountain-stormy-sky-daytime.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 41%;
+  max-height: 50vh;
+  position: relative;
+}
+
+.welcome_text {
+  position: relative;
+  text-align: center;
+  min-height: 70vh;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 20px;
+  font-size: 2.7em;
+  text-shadow: 6px 3px 6px #000000;
+}
+
+.welcome_text span {
+  display: block;
+}
+
+/* Product Overview */
+
+.new_products,
+.popular_products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  max-width: 75vw;
+  margin: auto;
+  grid-gap: 10px;
+  margin-top: 24px;
+}
+
+.productList_overview,
+.productList_overview h2 {
+  margin-top: 0px;
+}
+
+.productList_overview h1 {
+  margin-bottom: 0px;
+}
+
+.product_overview h2,
+.product_overview h1 {
+  grid-column: -1/1;
+  margin-bottom: 0px;
+  margin-top: 20px;
+}
+
+.product_overview img {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #707070;
+  width: 100%;
+  height: 80%;
+  display: block;
+  object-fit: cover;
+  transition: ease-out 0.5s;
+}
+.product_overview img:hover {
+  transform: scale(1.2);
+}
+
+.product_overview_content {
+  margin-top: 20px;
+}
+.product_overview_contentTest {
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+.woman_imgTest {
+  overflow: hidden;
+}
+.product_overview_contentTest img,
+.prod-img {
+  height: 250px;
+}
+
+.product_overview_content h3,
+.product_overview_content p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.product-sale {
+  display: flex;
+  gap: 10px;
+}
+
+.OldPrice {
+  text-decoration: line-through;
+}
+
+.NewPrice {
+  color: red;
+}
+
+/* Product list */
+
+.welcomeWomen {
+  background-image: url("../Images/person-sea.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  height: 30vh;
+  width: 100%;
+  position: relative;
+  opacity: 0.7;
+}
+.welcomeMen {
+  background-image: url("../Images/man-in-storm.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 40%;
+  height: 30vh;
+  width: 100%;
+  position: relative;
+  opacity: 0.7;
+}
+
+.welcome_textMenOrWomen {
+  text-shadow: 3px 3px 6px #000000;
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 20%;
+  bottom: 75%;
+  font-size: 2.5em;
+}
+
+.product_overview__top {
+  grid-column: -1/1;
+}
+.product_overview p {
+  margin-top: 1px;
+  margin-bottom: 0px;
+}
+.product_overview h1 {
+  margin-top: 0px;
+}
+.product_overview__top h2 {
+  margin-top: 0px;
+}
+
+/* Contact */
+.main_contact {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 20px;
+}
+.containerForm {
+  display: flex;
+  justify-content: center;
+}
+
+#contactForm {
+  padding: 20px;
+  background: #9cc1d9;
+}
+textarea,
+input,
+#contactForm {
+  border: 2px solid#46718c;
+  border-radius: 10px;
+}
+
+textarea,
+input {
+  border: 2px solid#46718c;
+  background: #ffffff;
+}
+::placeholder,
+input,
+textarea {
+  padding: 5px;
+  font-family: Tahoma, Verdana, "Segoe", sans-serif;
+  font-size: 16px;
+}
+input {
+  width: 300px;
+  height: 20px;
+}
+.input {
+  margin-bottom: 10px;
+}
+.container-content {
+  display: flex;
+  align-items: center;
+}
+
+.form-details,
+.form-message {
+  margin: 20px;
+}
+
+#message {
+  width: 300px;
+  height: 200px;
+}
+
+.formError {
+  color: red;
+  font-size: 0.9rem;
+  padding-left: 5px;
+
+  display: none;
+}
+
+.cta-submit {
+  display: flex;
+  justify-content: space-around;
+}
+
+.submitContainer {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+.success-message {
+  border: 5px solid rgb(43, 201, 43);
+  padding: 20px;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+/*About us */
+.about_container {
+  max-width: 75vw;
+  margin: auto;
+  text-align: center;
+}
+
+.about_container__img {
+  background-image: url("../Images/man-hiking-snowy-mountains.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 60%;
+  min-height: 40vh;
+  margin: auto;
+  background-position-x: center;
+  background-position-y: center;
+  box-shadow: 0px 3px 6px;
+}
+
+.about_container span {
+  font-weight: bold;
+}
+
+/* Footer */
+
+footer {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-top: 1px solid #707070;
+}
+
+footer li {
+  margin-left: -35px;
+}
+
+/* Product Specific*/
+
+.product-specific {
+  display: flex;
+  max-width: 900px;
+  margin: 50px auto;
+  border: 2px solid#46718c;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px 6px #46718c;
+  background: 3px 3px 5px 6px #46718c;
+}
+
+.product-specific > * {
+  flex: 1;
+}
+
+.product-specific__details {
+  padding: 0px 30px;
+}
+
+.product-image {
+  width: 100%;
+}
+
+.image-featured {
+  height: 350px;
+}
+
+#featured {
+  object-fit: cover;
+  height: 100%;
+}
+
+activeImg {
+  opacity: 1;
+}
+
+.product-image_thumbnails {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  margin-top: 5px;
+  height: 90px;
+}
+
+.product-image_thumbnails * {
+  flex-basis: 25%;
+}
+
+.thumbnail {
+  opacity: 0.5;
+  cursor: pointer;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbnail:hover,
+.product-image_thumbnails .activeImg {
+  opacity: 1;
+}
+
+.product_specific_cta {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px;
+}
+
+.addedToCart {
+  display: none;
+  position: absolute;
+  left: 40%;
+  right: 40%;
+  top: 30%;
+  padding: 30px;
+  background-color: #46718c;
+  color: white;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.product-specific__details h1 {
+  margin-bottom: 10px;
+  font-size: 32px;
+}
+
+/*Checkout Successful*/
+
+.checkout-successful {
+  border: 2px solid #46718c;
+  margin: 200px auto;
+  width: 30%;
+  padding: 10px;
+  box-shadow: 0px 3px 6px;
+  text-align: center;
+}
+.checkout-successful-header {
+  color: #05bf4a;
+}
+
+/**               Checkout NEW                **/
+/** Cart **/
+
+.cartPage {
+  border-bottom: 2px solid black;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+}
+
+.cart-headings,
+.sum {
+  font-weight: bold;
+}
+.cart-headings,
+.cart-itemContent,
+.sum {
+  width: 100%;
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.imageCart {
+  width: 10vh;
+  height: 10vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  background-position: 60%;
+  margin: auto;
+}
+
+.totalPrice-amount {
+  text-decoration: underline;
+}
+
+.amount {
+  display: flex;
+  justify-content: center;
+  padding: 1px;
+}
+.amount .middle {
+  padding: 0px 8px;
+}
+
+.plus:hover,
+.minus:hover {
+  cursor: pointer;
+  color: #8c7604;
+  transform: scale(1.4);
+}
+
+.plus,
+.minus {
+  font-weight: bold;
+  background: #e4e4e4;
+  border-radius: 5px;
+}
+
+/*Payment Details*/
+#securityCode {
+  margin-bottom: 0px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
+}
+.cards div {
+  padding: 1px;
+}
+
+/* Smaller desktop and landscape notepad */
+@media only screen and (max-width: 1200px) {
+  body {
+    font-size: 16px;
+  }
+  main {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  nav li {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+/* Notepad */
+@media only screen and (max-width: 900px) {
+  .product_overview,
+  .new_products,
+  .popular_products {
+    grid-template-columns: 1fr 1fr;
+  }
+  nav {
+    flex: 1 0 100%;
+    order: 1;
+    margin: 0rem -1rem -1rem -2.5rem;
+    padding: 5px;
+    border-top: 2px #46718c solid;
+    gap: around;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header__nav li {
+    padding-top: 5px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+  .header__content img {
+    padding: 5px;
+    width: 70px;
+    height: auto;
+  }
+
+  .product-specific,
+  .cart-checkout {
+    flex-direction: column;
+  }
+
+  .container-content {
+    display: flex;
+    flex-direction: column;
+  }
+  #contactForm {
+    padding: 20px 0px 20px 0px;
+  }
+  .product-specific {
+    max-width: 500px;
+  }
+  .main_contact,
+  .contactPage {
+    padding: 0px;
+  }
+  .addedToCart {
+    left: 30%;
+    right: 30%;
+  }
+  .welcome_textMenOrWomen {
+    font-size: 2.3em;
+  }
+}
+
+/* Iphone 6/7/8  */
+
+@media only screen and (max-width: 600px) {
+  .welcome_text {
+    font-size: 2.3em;
+  }
+  .product_overview,
+  .new_products,
+  .popular_products {
+    grid-template-columns: 1fr;
+  }
+  header {
+    padding-left: 4.5px;
+  }
+  .search {
+    margin-left: 12px;
+  }
+
+  .header__nav li {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .about_container__img {
+    background-position-x: left;
+  }
+
+  .payment-info form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .checkout-successful {
+    width: 50%;
+  }
+  .payment-info {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 50vw;
+  }
+  .payment-info img {
+    margin: auto;
+  }
+  #search {
+    width: 120px;
+  }
+  .main-product-specific {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .image-featured {
+    height: 250px;
+  }
+}

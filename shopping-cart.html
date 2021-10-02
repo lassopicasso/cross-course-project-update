@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Shopping cart and payment details" />
+    <title>Shopping cart, payment details</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles2.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/70984d4de4.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header__content">
+        <a href="index.html"><img src="Images/rainydays_logo.png" alt="RainyDays Logo" /></a>
+        <nav class="header__nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products/women.html">Women</a></li>
+            <li><a href="products/men.html">Men</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="searchAndIcons">
+          <div class="search">
+            <label for="search"><i class="icon fas fa-search" alt="Search Icon"></i></label>
+            <input type="text" id="search" placeholder="Search product" />
+          </div>
+          <div class="user-and-cart">
+            <a href=""><i class="fas fa-user" alt="log in icon"></i> </a>
+            <a href="shopping-cart.html"><i class="active fas fa-shopping-cart" alt="shopping cart icon"></i></a>
+            <span class="badge badge-warning" id="lblCartCount"> </span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="container">
+      <div class="form-outer">
+        <div class="slider">
+          <section class="cart page slidePage">
+            <h1>Cart</h1>
+            <div class="progress">
+              <div class="progress-step">
+                <p>Cart</p>
+                <div class="bullet bullet-active">
+                  <span>1</span>
+                </div>
+              </div>
+              <div class="progress-step">
+                <p>Shipping</p>
+                <div class="bullet">
+                  <span>2</span>
+                </div>
+              </div>
+              <div class="progress-step">
+                <p>Payment</p>
+                <div class="bullet">
+                  <span>3</span>
+                </div>
+              </div>
+              <div class="progress-step">
+                <p>Checkout</p>
+                <div class="bullet">
+                  <span>4</span>
+                </div>
+              </div>
+            </div>
+            <div class="field cartPage"></div>
+
+            <div class="sum"></div>
+            <div class="field nextBtn">
+              <button class="next-0" disabled>Next</button>
+            </div>
+          </section>
+
+          <section class="shipping-details page">
+            <h1>Shipping Details</h1>
+            <div class="progress">
+              <div class="progress-step">
+                <p>Cart</p>
+                <div class="bullet bullet-finish">
+                  <span>1</span>
+                </div>
+              </div>
+              <div class="progress-step">
+                <p>Shipping</p>
+                <div class="bullet bullet-active">
+                  <span>2</span>
+                </div>
+              </div>
+              <div class="progress-step">
+                <p>Payment</p>
+                <div class="bullet">
+                  <span>3</span>
+                </div>
+              </div>
+              <div class="progress-step">
+                <p>Checkout</p>
+                <div class="bullet">
+                  <span>4</span>
+                </div>
+              </div>
+            </div>
+            <form action="#" id="shippingForm">
+              <div class="field">
+                <div class="input">
+                  <input name="text" id="fullName" class="input" placeholder="Name (required)" />
+                  <div class="formError" id="fullNameError">Please enter your name</div>
+                </div>
+                <div class="input">
+                  <input name="email" id="email" class="input" placeholder="Email (required)" />
+                  <div class="formError" id="emailError">Please enter valid email, e.g. 1234@yahoo.com</div>
+                </div>
+                <div class="input">
+                  <input name="text" id="street" class="input" placeholder="Street (required)" />
+                  <div class="formError" id="streetError">Please enter your street</div>
+                </div>
+                <div class="input">
+                  <input name="text" id="postalCode" class="input" placeholder="Postal code (required)" />
+                  <div class="formError" id="postalCodeError">Please enter 4 digit</div>
+                </div>
+              </div>
+            </form>
+            <div class="field btns">
+              <button class="prev-1 prev">Previous</button>
+              <button class="next-1 next" disabled>Next</button>
+            </div>
+          </section>
+          <section class="payment-details page">
+            <h1>Payment Details</h1>
+            <div class="progress">
+              <div class="progress-step">
+                <p>Cart</p>
+                <div class="bullet bullet-finish">
+                  <span>1</span>
+                </div>
+              </div>
+              <div class="progress-step">
+                <p>Shipping</p>
+                <div class="bullet bullet-finish">
+                  <span>2</span>
+                </div>
+              </div>
+              <div class="progress-step">
+                <p>Payment</p>
+                <div class="bullet bullet-active">
+                  <span>3</span>
+                </div>
+              </div>
+              <div class="progress-step">
+                <p>Checkout</p>
+                <div class="bullet">
+                  <span>4</span>
+                </div>
+              </div>
+            </div>
+            <div class="field">
+              <form action="#" id="paymentForm">
+                <div class="field">
+                  <div class="input">
+                    <input name="text" id="cardNumber" class="input" placeholder="Card number (required)" />
+                    <div class="formError" id="cardNumberError">Please enter your 16-digit card number</div>
+                  </div>
+                  <div class="input">
+                    <input name="text" id="expiration" class="input" placeholder="Expiration Date (required)" />
+                    <div class="formError" id="expirationError">Please enter your card's exp. date: MM-YY</div>
+                  </div>
+                  <div class="input">
+                    <input name="text" id="securityCode" class="input" placeholder="Security code (required)" />
+                    <div class="formError" id="securityCodeError">Please enter your card's 3-digit CVC-number. Eg. 123</div>
+                  </div>
+                  <div class="cards">
+                    <div><i class="fab fa-cc-mastercard fa-2x"></i></div>
+                    <div><i class="fab fa-cc-visa fa-2x"></i></div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="field btns">
+              <button class="prev-2 prev">Previous</button>
+              <button class="next-2 next" disabled>Complete payment</button>
+            </div>
+          </section>
+          <section class="checkout-success page">
+            <h1>Payment successful</h1>
+            <div class="progress">
+              <div class="progress-step">
+                <p>Cart</p>
+                <div class="bullet bullet-finish">
+                  <span>1</span>
+                </div>
+              </div>
+              <div class="progress-step">
+                <p>Shipping</p>
+                <div class="bullet bullet-finish">
+                  <span>2</span>
+                </div>
+              </div>
+              <div class="progress-step">
+                <p>Payment</p>
+                <div class="bullet bullet-finish">
+                  <span>3</span>
+                </div>
+              </div>
+              <div class="progress-step">
+                <p>Checkout</p>
+                <div class="bullet bullet-active">
+                  <span>4</span>
+                </div>
+              </div>
+            </div>
+            <div class="field">
+              <div></div>
+
+              <p>Your order ID: 153415151</p>
+              <p>We sent a confirmation and receipt of your purchase to your email: HaraldRex@hotmail.com</p>
+            </div>
+            <div class="btns field">
+              <a href="index.html"><button class="next-3 next">Return Home</button></a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="about-us.html">
+        <i class="fas fa-info" alt="Info Icon"></i>
+      </a>
+      <ul>
+        <li><a href="about-us.html">About Us </a></li>
+      </ul>
+    </footer>
+    <script src="js/cart-checkout.js"></script>
+    <script src="js/cart-label-counter.js"></script>
+  </body>
+</html>
