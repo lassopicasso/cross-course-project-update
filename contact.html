@@ -23,10 +23,11 @@
           </ul>
         </nav>
         <div class="searchAndIcons">
-          <div class="search">
+          <form class="search" autocomplete="off">
             <label for="search"><i class="icon fas fa-search" alt="Search Icon"></i></label>
-            <input type="text" id="search" placeholder="Search product" />
-          </div>
+            <input type="text" id="search" name="search" placeholder="Search product" />
+            <div id="result"></div>
+          </form>
           <div class="user-and-cart">
             <a href=" "><i class="fas fa-user" alt="log in icon"></i> </a>
             <a href="shopping-cart.html"><i class="fas fa-shopping-cart" alt="shopping cart icon"></i></a>
@@ -70,13 +71,31 @@
       </main>
     </main>
     <footer>
-      <a href="about-us.html">
-        <i class="fas fa-info" alt="Info Icon"></i>
-      </a>
-      <ul>
-        <li><a href="about-us.html">About Us </a></li>
-      </ul>
+      <div class="footer-content">
+        <div class="company-information">
+          <h3>Company</h3>
+          <ul>
+            <li>RainyDays Inc</li>
+            <li>Org. 123456789</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Links</h3>
+          <ul>
+            <li><a href="about-us.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="shopping-cart.html">Shopping Cart</a></li>
+          </ul>
+        </div>
+        <div class="follow">
+          <h3>Follow us</h3>
+          <a href="https://twitter.com"><i class="fab fa-twitter-square"></i></a>
+          <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+          <a href="https://facebook.com"><i class="fab fa-facebook-square"></i></a>
+        </div>
+      </div>
     </footer>
+    <script src="js/search.js"></script>
     <script src="js/form.js"></script>
     <script src="js/cart-label-counter.js"></script>
   </body>

@@ -50,7 +50,6 @@ function controlInput(event) {
     };
   }
   controlForm();
-  //eventTarget.onblur = fullNameBlur;
 }
 
 function controlForm() {

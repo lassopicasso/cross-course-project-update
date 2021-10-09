@@ -7,11 +7,8 @@ const womenNav = document.querySelector(".womenNav");
 const menNav = document.querySelector(".menNav");
 
 const queryString = document.location.search;
-
 const params = new URLSearchParams(queryString);
-
 const id = params.get("id");
-
 const url = "https://rainydays.thefed.no/wp-json/wc/store/products/" + id;
 
 async function fetchDetails() {

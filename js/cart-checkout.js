@@ -35,19 +35,13 @@ const cartItems = JSON.parse(localStorage.getItem("Cartlist"));
 const cartOverview = document.querySelector(".cartPage");
 const cartSum = document.querySelector(".sum");
 
-if (cartItems === null) {
-  const button = document.querySelector(".nextBtn");
-  cartOverview.innerHTML += `<p>No items in the cart</p>`;
-  button.innerHTML = `<button disabled>Next</button>`;
-}
-
 //Array with unique items
 function onlyUnique(value, index, self) {
   return self.indexOf(value) === index;
 }
-
-let cartItemsUniqueArray = cartItems.filter(onlyUnique);
-
+if (cartItems !== null) {
+  let cartItemsUniqueArray = cartItems.filter(onlyUnique);
+}
 // Gather info from API and place it in HTML
 
 async function getProducts(url) {
@@ -99,6 +93,13 @@ async function getProducts(url) {
   });
 }
 getProducts("https://rainydays.thefed.no/wp-json/wc/store/products/");
+
+if (cartItems === null || cartItems.length === 0) {
+  console.log("hello");
+  const button = document.querySelector(".nextBtn");
+  cartOverview.innerHTML += `<p>No items in the cart</p>`;
+  button.innerHTML = `<button disabled>Next</button>`;
+}
 
 // If adjusting amount
 cartOverview.addEventListener("click", amountReduction);
