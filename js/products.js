@@ -18,7 +18,9 @@ async function getProducts(url) {
   }
   products.forEach(function (product) {
     for (let i = 0; i < product.categories.length; i++) {
+      console.log(product.categories[i].slug);
       if (product.categories[i].slug === `new-${gender}`) {
+        console.log(`new-${gender}`);
         newArray.push(product);
       }
       if (product.categories[i].slug === `popular-${gender}`) {
@@ -43,9 +45,10 @@ popularProductsButton.onclick = function () {
   class="fas fa-chevron-right fa-sm"></i></a><span style="color:#8c7604;"> Popular products</span>`;
 };
 
-getProducts("https://rainydays.thefed.no/wp-json/wc/store/products");
+getProducts("https://thefed.no/rainydays-v2/wp-json/wc/store/products");
 
 function createHTML(array, container) {
+  console.log(array);
   container.innerHTML = "";
   array.forEach(function (product) {
     container.innerHTML += `

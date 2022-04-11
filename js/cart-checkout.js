@@ -92,7 +92,7 @@ async function getProducts(url) {
     }
   });
 }
-getProducts("https://rainydays.thefed.no/wp-json/wc/store/products/");
+getProducts("https://thefed.no/rainydays-v2/wp-json/wc/store/products/");
 
 if (cartItems === null || cartItems.length === 0) {
   console.log("hello");
@@ -115,7 +115,7 @@ function amountReduction(event) {
       }
     }
 
-    getProducts("https://rainydays.thefed.no/wp-json/wc/store/products/");
+    getProducts("https://thefed.no/rainydays-v2/wp-json/wc/store/products/");
   }
   if (event.target.classList.contains("plus")) {
     for (let i = 0; i < cartItems.length; i++) {
@@ -126,7 +126,7 @@ function amountReduction(event) {
         break;
       }
     }
-    getProducts("https://rainydays.thefed.no/wp-json/wc/store/products/");
+    getProducts("https://thefed.no/rainydays-v2/wp-json/wc/store/products/");
   }
 }
 

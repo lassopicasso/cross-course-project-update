@@ -13,7 +13,7 @@ async function getTitles(url) {
   }
 }
 
-getTitles("https://rainydays.thefed.no/wp-json/wc/store/products");
+getTitles("https://thefed.no/rainydays-v2/wp-json/wc/store/products");
 
 function autocompleteMatch(input) {
   if (input === "") {

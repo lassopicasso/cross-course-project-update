@@ -9,17 +9,19 @@ const menNav = document.querySelector(".menNav");
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
-const url = "https://rainydays.thefed.no/wp-json/wc/store/products/" + id;
+const url = "https://thefed.no/rainydays-v2/wp-json/wc/store/products/" + id;
 
 async function fetchDetails() {
   const response = await fetch(url);
   const object = await response.json();
+  const categories = object.categories;
 
-  if (object.categories[0].name === "Men") {
+  if (categories[0].name === "Men") {
     menNav.classList.add("active");
   } else {
     womenNav.classList.add("active");
   }
+
   imageFeatured.innerHTML = "";
   imageFeatured.innerHTML = `<img class="product-image"
                                   id="featured"
